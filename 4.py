@@ -9,7 +9,8 @@ req = urllib.request
 a = '12345'
 for i in range(400):
     d = req.urlopen(url + a)
-    a = d.read().split()[-1].decode('utf-8')
-    print(a)
+    data = d.read().decode('utf-8')
+    a = data.split()[-1]
+    print(data)
 
 #peak.html이 나옴
